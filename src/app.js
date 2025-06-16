@@ -10,6 +10,11 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+// 🚀 Главная проверка
+app.get('/', (req, res) => {
+  res.send('🎯 PsychoTest API is up and running');
+});
+
 // Подключение маршрутов
 app.use('/api', questionsRoutes);
 app.use('/api', answersRoutes);
