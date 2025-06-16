@@ -10,7 +10,7 @@ const options = {
       description: 'API документация для сайта психо-теста',
     },
   },
-  apis: ['./routes/*.js']
+  apis: [new URL('./routes/*.js', import.meta.url).pathname]
 };
 
 const specs = swaggerJsdoc(options);
